@@ -1,4 +1,4 @@
-# FRD Math Utils
+# Math Utils
 
 PHP library for mathematical operations including median, average, sum, and formula processing.
 
@@ -12,7 +12,7 @@ PHP library for mathematical operations including median, average, sum, and form
 ## Installation
 
 ```bash
-composer require frd/math-utils
+composer require kachnitel/math-utils
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ composer require frd/math-utils
 ### Basic Operations
 
 ```php
-use Frd\MathUtils\Math;
+use Kachnitel\MathUtils\Math;
 
 // Calculate median
 $median = Math::median([1, 2, 3, 4, 5]); // 3
@@ -37,7 +37,7 @@ $sum = Math::sum([1, 2, 3, 4, 5]); // 15
 The formula processor supports nested functions, parameters, and basic arithmetic operations (+, -, *, /).
 
 ```php
-use Frd\MathUtils\Math;
+use Kachnitel\MathUtils\Math;
 
 // Simple formula
 $result = Math::process('1 + 1', []); // 2

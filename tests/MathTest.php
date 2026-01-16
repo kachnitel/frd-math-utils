@@ -1,9 +1,9 @@
 <?php
 
-namespace Frd\MathUtils\Tests;
+namespace Kachnitel\MathUtils\Tests;
 
-use Frd\MathUtils\Exception\MathException;
-use Frd\MathUtils\Math;
+use Kachnitel\MathUtils\Exception\MathException;
+use Kachnitel\MathUtils\Math;
 use Generator;
 use PHPUnit\Framework\TestCase;
 

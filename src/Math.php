@@ -1,8 +1,8 @@
 <?php
 
-namespace Frd\MathUtils;
+namespace Kachnitel\MathUtils;
 
-use Frd\MathUtils\Exception\MathException;
+use Kachnitel\MathUtils\Exception\MathException;
 use JsonException;
 
 class Math

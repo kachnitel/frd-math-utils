@@ -1,6 +1,6 @@
 <?php
 
-namespace Frd\MathUtils\Exception;
+namespace Kachnitel\MathUtils\Exception;
 
 use Exception;
 

@@ -1,12 +1,12 @@
 {
-  "name": "frd/math-utils",
+  "name": "kachnitel/math-utils",
   "description": "PHP library for mathematical operations including median, average, sum, and formula processing",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Flying Rubber Duck",
-      "email": "info@flyingrubberduck.com"
+      "name": "Ondrej Vana",
+      "email": "vana.ondrej@gmail.com"
     }
   ],
   "require": {
@@ -17,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Frd\\MathUtils\\": "src/"
+      "Kachnitel\\MathUtils\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Frd\\MathUtils\\Tests\\": "tests/"
+      "Kachnitel\\MathUtils\\Tests\\": "tests/"
     }
   },
   "minimum-stability": "dev",
