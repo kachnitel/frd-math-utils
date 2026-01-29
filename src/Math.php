@@ -55,7 +55,7 @@ class Math
      *
      * @SuppressWarnings(PHPMD.EvalExpression)
      */
-    public static function process(string $formula, array $params, array &$steps = null): float
+    public static function process(string $formula, array $params, ?array &$steps = null): float
     {
         $steps[] = $formula;
 

@@ -5,6 +5,7 @@ namespace Kachnitel\MathUtils\Tests;
 use Kachnitel\MathUtils\Exception\MathException;
 use Kachnitel\MathUtils\Math;
 use Generator;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 class MathTest extends TestCase
@@ -37,9 +38,7 @@ class MathTest extends TestCase
         $this->assertEquals(23, Math::sum([3, 9, 7, 4]));
     }
 
-    /**
-     * @dataProvider processProvider
-     */
+    #[DataProvider('processProvider')]
     public function testProcess($formula, $params, $expectedResult)
     {
         $this->assertEquals($expectedResult, Math::process($formula, $params));
@@ -214,9 +213,7 @@ class MathTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider processErrorProvider
-     */
+    #[DataProvider('processErrorProvider')]
     public function testProcessError($formula, $params, $expectedMessage)
     {
         $this->expectException(MathException::class);
