@@ -32,18 +32,19 @@ if [[ ! $BUMP_TYPE =~ ^(major|minor|patch|beta|rc|alpha)$ ]]; then
   exit 1
 fi
 
-# Check for --first-release flag
-HISTORY_FLAG="--history"
-if [[ "$2" == "--first-release" ]]; then
-  HISTORY_FLAG="--first-release"
+# Check for --first-release flag or auto-detect if no tags exist
+EXTRA_FLAGS=""
+if [[ "$2" == "--first-release" ]] || [[ -z $(git tag -l) ]]; then
+  EXTRA_FLAGS="--first-release"
+  echo "Creating first $BUMP_TYPE release..."
+else
+  echo "Creating $BUMP_TYPE release..."
 fi
-
-echo "Creating $BUMP_TYPE release..."
 echo ""
 
 # Generate changelog and create version tag
 # --commit: Commit the changes
-vendor/bin/conventional-changelog --$BUMP_TYPE --commit $HISTORY_FLAG
+vendor/bin/conventional-changelog --$BUMP_TYPE --commit $EXTRA_FLAGS
 
 # Get the new tag
 NEW_TAG=$(git describe --tags --abbrev=0)
