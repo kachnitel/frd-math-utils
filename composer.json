@@ -14,8 +14,14 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^10.0|^11.0",
-    "marcocesarato/php-conventional-changelog": "^1.17"
+    "marcocesarato/php-conventional-changelog": "dev-fix/symfony-console-7-compat"
   },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/kachnitel/php-conventional-changelog"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Kachnitel\\MathUtils\\": "src/"
@@ -32,4 +38,3 @@
     "release": ".scripts/release.sh"
   }
 }
-
